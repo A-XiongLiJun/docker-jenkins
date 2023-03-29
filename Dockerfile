@@ -10,8 +10,9 @@ RUN npm install pnpm -g
 
 RUN pnpm install
 
-COPY . .
+RUN pnpm build
 
-EXPOSE 5173/tcp
-
-CMD ["pnpm", "dev"]
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 8091
+CMD ["nginx", "-g", "daemon off;"]

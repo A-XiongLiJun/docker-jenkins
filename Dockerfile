@@ -1,6 +1,6 @@
 FROM node:16
 
-WORKDIR /root/www
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -13,6 +13,7 @@ RUN pnpm install
 RUN pnpm build
 
 FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/build /root/www
 EXPOSE 8091
 CMD ["nginx", "-g", "daemon off;"]
+docker build -t nginx:v1 .

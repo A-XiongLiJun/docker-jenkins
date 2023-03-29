@@ -16,4 +16,3 @@ FROM nginx:alpine
 COPY --from=build /app/build /root/www
 EXPOSE 8091
 CMD ["nginx", "-g", "daemon off;"]
-docker build -t nginx:v1 .

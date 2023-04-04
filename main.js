@@ -5,7 +5,7 @@ document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
-      <span>这是一张不显示的logo图2</span>
+      <span>这是一张不显示的logo图1</span>
     </a>
     <h1>Hello Vite!</h1>
     <div class="card">

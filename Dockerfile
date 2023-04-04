@@ -6,11 +6,12 @@ WORKDIR /app
 COPY package.json ./
 # 执行npm命令
 RUN npm config set registry https://registry.npm.taobao.org/ && \
-    npm install
+    npm install pnpm -g && \
+    pnpm install
 # 复制当前目录下的所有文件到app目录下
 COPY . ./
 # 执行npm run build命令
-RUN npm run build
+RUN pnpm build
  
 # 构建镜像基于nginx:alpine镜像
 FROM nginx:alpine

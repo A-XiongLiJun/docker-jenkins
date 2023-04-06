@@ -5,7 +5,7 @@ document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
-      <span>这是gitee仓库 服务器测试打包3</span>
+      <span>这是云效仓库 服务器测试打包0</span>
     </a>
     <h1>Hello Vite!</h1>
     <div class="card">
